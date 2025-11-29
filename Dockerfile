@@ -18,6 +18,7 @@ RUN pip install --no-cache-dir --upgrade pip && \
 COPY . .
 
 ENV PORT=10000
+ENV WHISPER_MODEL=tiny
 EXPOSE 10000
 
-CMD ["sh", "-c", "python app.py"]
+CMD ["sh", "-c", "gunicorn app:app --bind 0.0.0.0:$PORT --timeout 300 --workers 1"]
