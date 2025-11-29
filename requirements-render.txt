@@ -11,3 +11,4 @@ pydub>=0.25.1
 pysrt>=1.1.2
 translate>=3.6.1
 gunicorn>=21.0.0
+audioop-lts>=0.2.1
